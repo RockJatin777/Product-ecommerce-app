@@ -165,25 +165,29 @@ class ProductItemDetails extends Component {
                     onClick={this.onDecrementQuantity}
                     data-testid="minus"
                   >
-                    .<BsDashSquare className="quantity-controller-icon" />
+                  .<BsDashSquare className="quantity-controller-icon" />
                   </button>
                   <p className="quantity">{quantity}</p>
+                  <Link to="/cart">
+                    <button
+                      type="button"
+                      className="quantity-controller-button"
+                      onClick={this.onIncrementQuantity}
+                      data-testid="plus"
+                    >
+                      .<BsPlusSquare className="quantity-controller-icon" />
+                    </button>
+                  </Link>
+                </div>
+                <Link to="/cart">
                   <button
                     type="button"
-                    className="quantity-controller-button"
-                    onClick={this.onIncrementQuantity}
-                    data-testid="plus"
+                    className="button add-to-cart-btn"
+                    onClick={onClickAddToCart}
                   >
-                    .<BsPlusSquare className="quantity-controller-icon" />
+                    ADD TO CART
                   </button>
-                </div>
-                <button
-                  type="button"
-                  className="button add-to-cart-btn"
-                  onClick={onClickAddToCart}
-                >
-                  ADD TO CART
-                </button>
+                </Link>
               </div>
             </div>
             <h1 className="similar-products-heading">Similar Products</h1>
